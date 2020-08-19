@@ -8,3 +8,4 @@ https://arxiv.org/abs/1512.03385.pdf ResNet
 https://arxiv.org/pdf/1502.03167.pdf BatchNormalize
 https://arxiv.org/abs/1803.08494.pdf GroupNormalize
 https://arxiv.org/pdf/1412.6980.pdf Adam
+https://arxiv.org/abs/1411.4038 FCN
