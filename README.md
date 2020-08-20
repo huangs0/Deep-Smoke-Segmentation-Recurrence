@@ -5,7 +5,6 @@ If you like this repository, or it helps you a lot, that will be my honor. Pleas
 
 ## For Recurrence or Optimization Details, please see 
 https://mp.weixin.qq.com/s__biz=MzkyNDA0OTIzNQ==&mid=2247483692&idx=1&sn=c195da2f27f228797dc47230416acf3a&chksm=c1da8b10f6ad02063bde9f1456bacd205d43bf3864ff5fe0a89435893bd59971ddecfd2c1fa1&token=116246471&lang=zh_CN#rd
-
 ## Want the papers mentioned in above article, please see:
 SSD Optimization: https://arxiv.org/pdf/1611.10012
 
