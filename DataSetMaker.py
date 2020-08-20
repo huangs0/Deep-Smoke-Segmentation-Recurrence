@@ -9,7 +9,7 @@ MAIN FUNCTION:
     CONVERT THE .png IMAGE FILE INTO NUMPY ARRAY
     CONVERT THE [H,W,C] INTO [C,H,W]
     SAVE THE ARRAY INTO .npy NUMPY FILE
-BECAUSE THE IMG FILE HAS BEEN RANDOMIZED, SO SIMPLY PICK 1-2800 as TRAINSET, 2801-3000 as EVALUATESET    
+BECAUSE THE IMG FILE HAS BEEN RANDOMIZED, SO SIMPLY PICK 1-2800 as TRAINSET, 1-3000 as EVALUATESET    
 '''
 
 train_label = numpy.zeros((2800,256,256), dtype=numpy.uint8)
@@ -44,11 +44,19 @@ for i in range(1, 2801):
 numpy.save("train_label", train_label)
 numpy.save("train_input", train_input)
 
-eval_label = numpy.zeros((200,256,256), dtype=numpy.uint8)
-eval_input = numpy.zeros((200,3,256,256), dtype=numpy.uint8)
+eval_label = numpy.zeros((3000,256,256), dtype=numpy.uint8)
+eval_input = numpy.zeros((3000,3,256,256), dtype=numpy.uint8)
 
-for i in range(1, 201):
-    indexstr = str(i+2800) + ".png"
+for i in range(1, 3001):
+    # Indexstr is to find the corresponding .png file
+    if i < 10:
+        indexstr = "000" + str(i) + ".png"
+    elif i < 100:
+        indexstr = "00" + str(i) + ".png"
+    elif i < 1000:
+        indexstr = "0" + str(i) + ".png"
+    else:
+        indexstr = str(i) + ".png"
     lab = cv2.imread(os.path.join("target/", indexstr), cv2.IMREAD_GRAYSCALE)
     inp = cv2.imread(os.path.join("input/", indexstr), cv2.IMREAD_UNCHANGED)
     for j in range(256):
